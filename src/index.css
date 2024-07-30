@@ -1,13 +1,163 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #e0e0e0;
 }
+
+.App {
+  width: 400px;
+  height: 600px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid #39ff14; /* Neon border */
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.login h2 {
+  margin-bottom: 20px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #39ff14; /* Neon border */
+  border-radius: 5px;
+  background-color: #282828;
+  color: #e0e0e0;
+}
+
+.login button {
+  padding: 10px 20px;
+  background-color: #39ff14; /* Neon background */
+  color: #0f0f0f; /* Dark text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login button:hover {
+  background-color: #32cc12; /* Darker neon on hover */
+  box-shadow: 0 0 5px #39ff14; /* Neon glow */
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-box {
+  display: flex;
+  padding: 15px;
+  border-top: 2px solid #39ff14; /* Neon border */
+  background-color: #1a1a1a;
+}
+
+.input-box input {
+  flex: 1;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 1em;
+  background-color: #282828;
+  color: #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  margin-right: 10px;
+  border: 1px solid #39ff14; /* Neon border */
+}
+
+.input-box input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #39ff14; /* Neon glow */
+}
+
+.input-box button {
+  padding: 10px 15px;
+  background-color: #39ff14; /* Neon background */
+  color: #0f0f0f; /* Dark text */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.input-box button:hover {
+  background-color: #32cc12; /* Darker neon on hover */
+  box-shadow: 0 0 5px #39ff14; /* Neon glow */
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+.message.received {
+  align-self: flex-start;
+}
+
+.message.sent {
+  align-self: flex-end;
+}
+
+.message p {
+  background-color: #282828;
+  padding: 12px;
+  border-radius: 15px;
+  word-wrap: break-word;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+  border: 1px solid #39ff14; /* Neon border */
+}
+
+.message.sent p {
+  background-color: #39ff14; /* Neon background */
+  color: #0f0f0f; /* Dark text */
+}
+
+.time {
+  font-size: 0.8em;
+  color: #999;
+  align-self: flex-end;
+}
+
